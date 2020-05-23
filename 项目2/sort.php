@@ -1,52 +1,5 @@
 <?php
 
-//冒泡排序
-function bubblesort($arr)
-{
-    for ($i = 0, $j = count($arr); $i < $j; $i++) {
-        for ($k = $j - 1; $k > $i; $k--) {
-            if ($arr[$k] < $arr[$k - 1]) list($arr[$k - 1], $arr[$k]) = array($arr[$k], $arr[$k - 1]);
-        }
-    }
-    return $arr;
-}
-
-$arr = array(1, 4, 14, 3, 56, 23, 435, 2, 234, 2, 33, 23, 123);
-print_r(bubblesort($arr));
-
-// 快速排序
-function quicksort($arr)
-{
-    if (($count = count($arr)) <= 1) return $arr;
-    $base = $arr[0];
-    $left = $right = array();
-    for ($i = 1; $i < $count; $i++) {
-        if ($arr[$i] <= $base) $left[] = $arr[$i];
-        else $right[] = $arr[$i];
-    }
-    $left = quicksort($left);
-    $right = quicksort($right);
-    return array_merge($left, array($base), $right);
-}
-
-echo join(',', quicksort(array(1, 3, 23, 5, 234, 65, 6)));
-
-// 插入排序
-function insertsort($arr)
-{
-    for ($i = 1, $j = count($arr); $i < $j; $i++) {
-        $k = $i;
-        while ($k > 0 && $arr[$k - 1] > $arr[$k]) {
-            list($arr[$k], $arr[$k - 1]) = array($arr[$k - 1], $arr[$k]);
-            $k--;
-        }
-    }
-    return $arr;
-}
-
-$array = array(10, 8, 7, 5, 1, 2, 3, 4);
-print_r(insertsort($array));
-
 
 // 选择排序, (非递归)
 function selectsort($arr)
