@@ -25,6 +25,6 @@ function insertSort($arr)
     return $arr;
 }
 
-$arr = array(6, 19, 26, 62, 88, 99, 18, 16, 1);
+$arr = array(6, 19, 26, 62, 88, 99, 18, 16, 1, 20, 4, 10);
 echo '<pre>';
 print_r(insertSort($arr));
