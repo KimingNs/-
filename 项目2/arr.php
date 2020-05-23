@@ -2,5 +2,8 @@
 
 $arr = 'abcdefg';
 
-$arr[0];
-echo substr($arr, 1, 1);
+print_r($arr);
+echo '<br/>';
+echo $arr[0];
+echo '<br/>';
+echo substr($arr, 0, 1);
