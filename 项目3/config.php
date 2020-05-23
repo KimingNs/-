@@ -1,6 +1,6 @@
 <?php
 /**
- * 配置数据库信息
+ * 配置数据库具体信息
  */
 $dbhost = 'localhost';
 $dbname = 'niuniu';
