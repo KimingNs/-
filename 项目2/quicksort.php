@@ -14,4 +14,6 @@ function quickSort($arr)
     return array_merge($left, array($base), $right);
 }
 
-echo join(',', quickSort(array(5, 4, 3, 6, 8, 9, 7, 2, 1, 10)));
+$arr = array(5, 4, 3, 6, 8, 9, 7, 2, 1, 10);
+echo '<pre>';
+print_r(quickSort($arr));

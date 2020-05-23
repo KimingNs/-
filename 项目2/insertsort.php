@@ -26,4 +26,5 @@ function insertSort($arr)
 }
 
 $arr = array(6, 19, 26, 62, 88, 99, 18, 16, 1);
-var_dump(insertSort($arr));
+echo '<pre>';
+print_r(insertSort($arr));
