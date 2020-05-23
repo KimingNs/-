@@ -45,7 +45,7 @@ function allpage()
 
 @$page_all_num = allpage();
 //  echo $page_all_num;
-@$page_Size = 1;//每页显示的数据条数
+@$page_Size = 3;//每页显示的数据条数
 @$page_Num = empty($_GET["page_Num"]) ? 1 : $_GET["page_Num"];//刷新后会抹去get的传值，所以需要预设为1.
 @$page_End = ceil($page_all_num / $page_Size);//总页数 ceil返回大于或者等于指定表达式的最小整数
 @$array = pagination($page_Num, $page_Size);
